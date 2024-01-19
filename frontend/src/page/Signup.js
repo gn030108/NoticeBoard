@@ -38,9 +38,9 @@ const Signup = () => {
             <Navbar/>
             <div className={styles.box}>
                 <div className={styles.main}>
-                    <input placeholder='아이디' name='id' value={id} onChange={handleInputChange}></input>
-                    <input placeholder='비밀번호' name='pw' value={pw} onChange={handleInputChange}></input>
-                    <input placeholder='이름' name='name' value={name} onChange={handleInputChange}></input>
+                    <input placeholder='Id' name='id' value={id} onChange={handleInputChange}></input>
+                    <input placeholder='Pw' name='pw' value={pw} onChange={handleInputChange}></input>
+                    <input placeholder='Name' name='name' value={name} onChange={handleInputChange}></input>
                 </div>
                 <div>
                     <button className={`${btn.custom}, ${btn.login}`} onClick={Signup}>SignUp!</button>
