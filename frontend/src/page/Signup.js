@@ -9,8 +9,8 @@ const Signup = () => {
 
     const dispatch = useDispatch();
 
-    const id = useSelector((state)=>state.SignUp.id)
-    const pw = useSelector((state)=>state.SignUp.pw)
+    const memberId = useSelector((state)=>state.SignUp.memberId)
+    const password = useSelector((state)=>state.SignUp.password)
     const name = useSelector((state)=>state.SignUp.name)
 
     const handleInputChange = (e) => {
@@ -38,8 +38,8 @@ const Signup = () => {
             <Navbar/>
             <div className={styles.box}>
                 <div className={styles.main}>
-                    <input placeholder='Id' name='id' value={id} onChange={handleInputChange}></input>
-                    <input placeholder='Pw' name='pw' value={pw} onChange={handleInputChange}></input>
+                    <input placeholder='Id' name='id' value={memberId} onChange={handleInputChange}></input>
+                    <input placeholder='Pw' name='pw' value={password} onChange={handleInputChange}></input>
                     <input placeholder='Name' name='name' value={name} onChange={handleInputChange}></input>
                 </div>
                 <div>

@@ -9,8 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 const Login = () => {
 
     const dispatch = useDispatch();
-    const id = useSelector((state)=>state.Login.id)
-    const pw = useSelector((state)=>state.Login.pw)
+    const memberId = useSelector((state)=>state.Login.memberId)
+    const password = useSelector((state)=>state.Login.password)
 
 
     const handleInputChange = (e) => {
@@ -33,8 +33,8 @@ const Login = () => {
             <Navbar/>
             <div className={styles.box}>
                 <form>
-                    <input placeholder='Id' name="id"  value={id} onChange={handleInputChange}></input>
-                    <input placeholder='Pw' name="pw" type='password'  value={pw} onChange={handleInputChange}></input>
+                    <input placeholder='Id' name="id"  value={memberId} onChange={handleInputChange}></input>
+                    <input placeholder='Pw' name="pw" type='password'  value={password} onChange={handleInputChange}></input>
                 </form>
                 <div className={styles.button}>
                     <button className={`${btn.custom}, ${btn.login}`} onClick={login}>Login !</button>
