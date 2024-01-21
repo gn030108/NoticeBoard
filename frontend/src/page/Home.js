@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from '../style/Home.module.scss'
 import btn from '../style/Button.module.scss'
 import { homeActions } from '../redux/reducer/homeReducer';
@@ -12,10 +13,16 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const Home = () => {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const name = useSelector((state)=>state.home.name)
 
     const change = ()=>{
         dispatch(homeActions.getname('성공'))
+    }
+
+    const gowrite=()=>{
+        navigate('/write')
     }
 
     return (
@@ -40,8 +47,8 @@ const Home = () => {
                         </div>
                     </div>{/*게시물부분*/}
 
-                    <div className={styles.write}>
-                        <button className={`${btn.custom}, ${btn.login}`} >글쓰기</button>
+                    <div className={styles.write} >
+                        <button className={`${btn.custom}, ${btn.login}`} onClick={gowrite}>글쓰기</button>
                     </div>
 
                     <div className={styles.paging}>
