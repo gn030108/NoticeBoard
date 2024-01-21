@@ -21,7 +21,7 @@ const Home = () => {
         dispatch(homeActions.getname('성공'))
     }
 
-    const gowrite=()=>{
+    const goWrite=()=>{
         navigate('/write')
     }
 
@@ -48,7 +48,7 @@ const Home = () => {
                     </div>{/*게시물부분*/}
 
                     <div className={styles.write} >
-                        <button className={`${btn.custom}, ${btn.login}`} onClick={gowrite}>글쓰기</button>
+                        <button className={`${btn.custom}, ${btn.login}`} onClick={goWrite}>글쓰기</button>
                     </div>
 
                     <div className={styles.paging}>

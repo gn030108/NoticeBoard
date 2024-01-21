@@ -4,6 +4,8 @@ import btn from '../style/Button.module.scss'
 import Navbar from '../component/Navbar'
 import { SignupActions } from '../redux/reducer/SignupReducer';
 import { useDispatch, useSelector } from 'react-redux';
+import  axiosInstance from '../api/axiosInstance';
+import axios from 'axios';
 
 const Signup = () => {
 
@@ -31,6 +33,24 @@ const Signup = () => {
         dispatch(SignupActions.reset())
     }
 
+    //회원가입 Post
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+
+        axiosInstance.post('/member/register',{
+            memberId,
+            password,
+            name,
+        })
+            .then(response => {
+                console.log('회원가입 성공')
+                alert('회원가입 성공 ')
+            })
+            .catch(error => {
+                console.log('회원가입 실패')
+            })
+    }
+
 
 
     return (
@@ -43,7 +63,7 @@ const Signup = () => {
                     <input placeholder='Name' name='name' value={name} onChange={handleInputChange}></input>
                 </div>
                 <div>
-                    <button className={`${btn.custom}, ${btn.login}`} onClick={Signup}>SignUp!</button>
+                    <button className={`${btn.custom}, ${btn.login}`} onClick={handleSubmit}>SignUp!</button>
                 </div>{/*버튼들*/}
             </div>
         </div>

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBoardApplication<springBoard>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "backend.springBoard.SpringBoardApplication",
+            "projectName": "springBoard",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
