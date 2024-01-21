@@ -45,6 +45,7 @@ const Signup = () => {
             .then(response => {
                 console.log('회원가입 성공')
                 alert('회원가입 성공 ')
+                Signup()
             })
             .catch(error => {
                 console.log('회원가입 실패')

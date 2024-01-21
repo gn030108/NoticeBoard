@@ -41,6 +41,7 @@ const Login = () => {
             .then(response => {
                 console.log('로그인 성공')
                 alert('로그인 성공 ')
+                login()
             })
             .catch(error => {
                 console.log('로그인 실패')
