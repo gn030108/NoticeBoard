@@ -1,12 +1,13 @@
 package backend.springBoard.Service;
 
 import backend.springBoard.Domain.Token;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoField;
 import java.util.HashMap;
 import java.util.UUID;
-
+@Component
 public class TokenProvider {
 
     long duration = 30;

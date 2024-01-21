@@ -32,13 +32,4 @@ public class MemberController {
         return ResponseEntity.ok(loginState);
     }
 
-    @PostMapping("/member/tokenLogin")
-    public ResponseEntity<LoginState> tokenLogin(@RequestBody String tokenKey){
-        LoginState loginState = memberService.tokenLogin(tokenKey);
-        return ResponseEntity.ok(loginState);
-    }
-
-
-
-
 }
