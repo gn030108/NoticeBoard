@@ -67,3 +67,12 @@
     background: linear-gradient(0deg, $lavender 10%, $silverBlue 90%);
 }
 
+.write {
+    background: $lavender;
+    border: none;
+    color: white;
+}
+.write:hover {
+    background: rgb(0,3,255);
+    background: linear-gradient(0deg, $lavender 10%, $silverBlue 90%);
+}
